@@ -1,0 +1,129 @@
+
+/* Allgemein ------------------ */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-y: auto;
+}
+
+body {
+    background: #7aedff;
+    background-image: url("../img/stars.jpg");
+    background-size: 100vh;
+    color: snow;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+hr {
+    margin: 2rem 0 0 0;
+}
+
+/* Containers ------------------ */
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 4%;
+    padding-top: 1%;
+
+    height: 100vh;
+    background: #393939;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    margin: 1rem 0 0 0;
+    font-size: 2.5rem;
+}
+
+.introduction, .hobbies, .cv {
+    display: flex;
+    margin: 2rem 0 0 0;
+}
+
+/* Links ------------------ */
+
+.links, .footer {
+    width: inherit;
+    background: snow;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #21002e;
+}
+
+/* Vorstellung ------------------ */
+
+.introduction {
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#personal-img {
+    width: 14rem;
+    font-size: 1.4rem;
+}
+
+/* Hobbies ------------------ */
+
+.hobbies {
+    flex-flow: row;
+    gap: 2rem;
+}
+
+#book-img {
+    width: 12rem;
+}
+
+#tkd-img {
+    width: 14.75rem;
+}
+
+#ds-img {
+    width: 27rem;
+}
+
+.-flex-column {
+    flex-flow: column;
+}
+
+.-fill {
+    flex: 1;
+}
+
+li {
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+
+/* Lebenslauf ------------------ */
+
+.cv {
+    flex-flow: column;
+}
+
+
+
