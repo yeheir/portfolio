@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Persönliches Portfolio">
+    <title>Einzeltraining</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-index.css">
+</head>
+
+<body>
+    
+    <div page-to-include="/templates/header.html"></div>
+
+    <main>        
+        
+        <section id="section-middle">
+
+            <h1>Personaltraining!</h1>
+            <p>Vielen Dank für Ihr Interesse an einem Training mit mir!
+                Ich unterrichte meine Schüler seit zwei Jahren und bin als Assistenztrainer in meinem Dojo tätig.
+                Ich bin überzeugt, dass Sie durch ein Training mit mir wertvolle Tipps und Erfahrungen sammeln können.</p>
+
+            <h2>Was ich anbiete</h2>
+            <ul>
+                <li>Persönliches Coaching für Anfänger und Fortgeschrittene</li>
+                <li>Individualisierte Trainungspläne</li>
+                <li>Technische Verbesserung und Fehlerkorrektur</li>
+                <li>Motivationsunterstützung und persönliche Beratung</li>
+            </ul>
+            
+            <h2>Meine Erfahrung</h2>
+            <p>Mit zwei Jahren Unterrichtserfahrung und meiner Arbeit als Assistenztrainer habe ich vielen Schülern geholfen, ihre Ziele zu erreichen. 
+                Ich arbeite geduldig mit jedem Schüler, um sicherzustellen, dass er sein volles Potenzial ausschöpft.</p>
+            
+            <div>
+                <img src="your-image-here.jpg" alt="Personal Trainer Foto">
+                <h2>Kontakt & Mehr Informationen</h2>
+                <p>Haben Sie Fragen? <a href="#footer">kontaktieren Sie mich direkt</a>!</p>
+            </div>
+            
+            <p>Bitte füllen Sie alle erforderlichen Felder aus.</p>
+        
+            <form method="POST" action="https://gibm.becknet.ch/formular/formular.php">
+                
+                <!-- PERSÖNLICHE INFORMATIONEN -->
+                <fieldset>
+                    <legend>Persönliche Informationen</legend>
+        
+                    <label for="vorname">Vorname: *</label>
+                    <input type="text" id="vorname" name="vorname" required autofocus>
+                    <br><br>
+        
+                    <label for="nachname">Nachname: *</label>
+                    <input type="text" id="nachname" name="nachname" required>
+                    <br><br>
+        
+                    <label for="alter">Alter: *</label>
+                    <input type="number" id="alter" name="alter" required min="5" max="120" step="1">
+                    <br><br>
+        
+                    <label for="geburtsdatum">Geburtsdatum: *</label>
+                    <input type="date" id="geburtsdatum" name="geburtsdatum">
+                    <br><br>
+        
+                    <label for="gewicht">Gewicht in kg: *</label>
+                    <input type="number" id="gewicht" name="gewicht" required min="20" max="250" step="0.1">
+                    <br><br>
+        
+                    <label for="grosse">Grösse in cm: *</label>
+                    <input type="number" id="grosse" name="grosse" required min="100" max="230">
+                    <br><br>
+                </fieldset>
+        
+                <!-- KONTAKTINFORMATION -->
+                <fieldset>
+                    <legend>Kontaktinformation</legend>
+        
+                    <label for="email">Email Adresse: *</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+        
+                    <label for="telefon">Telefonnummer: *</label>
+                    <input type="tel" id="telefon" name="telefon" required pattern="[0-9\s\-\+\(\)]+">
+                    <br><br>
+                </fieldset>
+        
+                <!-- TAEKWONDO INFORMATIONEN -->
+                <fieldset>
+                    <legend>Taekwondo Informationen</legend>
+        
+                    <label for="guertelgrad">Gürtel: *</label>
+                    <select id="guertelgrad" name="guertelgrad" required>
+                        <option value="">-- Bitte auswählen --</option>
+                        <option value="Weiss">Weiss (10. Kup)</option>
+                        <option value="Weiss-Gelb">Weiss-Gelb (9. Kup)</option>
+                        <option value="Gelb">Gelb (8. Kup)</option>
+                        <option value="Gelb-Gruen">Gelb-Grün (7. Kup)</option>
+                        <option value="Gruen">Grün (6. Kup)</option>
+                        <option value="Gruen-Blau">Grün-Blau (5. Kup)</option>
+                        <option value="Blau">Blau (4. Kup)</option>
+                        <option value="Blau-Rot">Blau-Rot (3. Kup)</option>
+                        <option value="Rot">Rot (2. Kup)</option>
+                        <option value="Rot-Schwarz">Rot-Schwarz (1. Kup)</option>
+                        <option value="Schwarz-1">Schwarz (1. Dan)</option>
+                        <option value="Schwarz-2">Schwarz (2. Dan)</option>
+                        <option value="Schwarz-3">Schwarz (3. Dan)</option>
+                        <option value="Schwarz-4+">Schwarz (4. Dan+)</option>
+                    </select>
+                    <br><br>
+        
+                    <label for="erfahrung">Trainings-Erfahrung in Jahre: *</label>
+                    <input type="number" id="erfahrung" name="erfahrung" required min="0" max="70">
+                    <br><br>
+        
+                    <fieldset>
+                        <legend>Gewünschte Trainingsart: *</legend>
+                        
+                        <input type="radio" id="training-grundlagen" name="trainingsart" value="Grundlagen" required>
+                        <label for="training-grundlagen">Grundlagen & Technik</label>
+                        <br>
+        
+                        <input type="radio" id="training-sparring" name="trainingsart" value="Sparring">
+                        <label for="training-sparring">Sparring und Wettkampf-Vorbereitung</label>
+                        <br>
+        
+                        <input type="radio" id="training-formen" name="trainingsart" value="Formen">
+                        <label for="training-formen">Formen</label>
+                        <br>
+        
+                        <input type="radio" id="training-allgemein" name="trainingsart" value="Allgemein">
+                        <label for="training-allgemein">Allgemeintraining</label>
+                        <br><br>
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>Trainings-Schwerpunkte:</legend>
+                        
+                        <input type="checkbox" id="schwerpunkt-kicks" name="schwerpunkte" value="Hochflugtritte">
+                        <label for="schwerpunkt-kicks">Hochflugtritte</label>
+                        <br>
+        
+                        <input type="checkbox" id="schwerpunkt-schnelligkeit" name="schwerpunkte" value="Schnelligkeit">
+                        <label for="schwerpunkt-schnelligkeit">Schnelligkeit und Reaktion</label>
+                        <br>
+        
+                        <input type="checkbox" id="schwerpunkt-kraft" name="schwerpunkte" value="Kraft">
+                        <label for="schwerpunkt-kraft">Krafttest</label>
+                        <br>
+        
+                        <input type="checkbox" id="schwerpunkt-selbstverteidigung" name="schwerpunkte" value="Selbstverteidigung">
+                        <label for="schwerpunkt-selbstverteidigung">Selbstverteidigung</label>
+                        <br>
+                    </fieldset>
+                </fieldset>
+        
+                <!-- ZUSÄTZLICHE INFORMATIONEN -->
+                <fieldset>
+                    <legend>Zusätzliche Informationen</legend>
+        
+                    <label for="ziele">Trainingsziele:</label>
+                    <br>
+                    <textarea id="ziele" name="ziele" rows="5" cols="50" maxlength="500" placeholder="Was möchten Sie mit dem Training erreichen?"></textarea>
+                    <br><br>
+        
+                    <label for="verletzungen">Verletzungen:</label>
+                    <br>
+                    <textarea id="verletzungen" name="verletzungen" rows="5" cols="50" placeholder="Haben Sie aktuelle Verletzungen oder Einschränkungen?"></textarea>
+                    <br><br>
+        
+                    <label for="bemerkungen">Weitere Bemerkungen:</label>
+                    <br>
+                    <textarea id="bemerkungen" name="bemerkungen" rows="5" cols="50" placeholder="Zusätzliche Informationen..."></textarea>
+                    <br><br>
+        
+                    <label for="verfuegbarkeit">Bevorzugte(r) Trainingstag(e): *</label>
+                    <input type="text" id="verfuegbarkeit" name="verfuegbarkeit" required size="40" placeholder="z.B. Mo, Mi, Fr oder flexible Zeiten">
+                    <br><br>
+                </fieldset>
+        
+                <!-- FORM ACTIONS -->
+                <input type="submit" value="Registrierung Absenden">
+                <input type="reset" value="Formular Zurücksetzen">
+        
+            </form>
+
+        </section>
+
+    </main>
+
+    <div page-to-include="/templates/footer.html"></div>
+
+
+    
+    <script src="/js/include.js"></script>
+
+</body>
+
+</html>
