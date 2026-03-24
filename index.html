@@ -16,30 +16,106 @@
 
     <main>
         
-        <section id="banner-left"></section>
+        <aside id="banner-left"></aside>        
+        <aside id="banner-right"></aside>
 
-        <div>
-            <section id="intro-section"></section>
-                <h1>Mein Portfolio</h1>
-                <p>Hallo, ich bin Yegor</p>
-                <p>Ich bin ein IT-Lernende.</p>
-                <p>Das ist eine kleine Testportfolio.</p>
-            </section>  
+        <section id="intro-section">
 
-            <section id="interests-section">
-                <h2>Interessen</h2>
-                <p>Ich beschäftige mich besonders mit:</p>
-                <ol>
-                    <li>Programmierung</li>
-                    <li>Taekwondo</li>
-                </ol>
-            </section>
+            <h1>Mein Portfolio</h1>
+            <p>Hallo, ich bin <strong>Yehor</strong></p>
+            <p>Ich bin ein <em>IT-Lernender</em></p>
+            <p>Dieses Portfolio zeigt, wer ich bin, was mich interessiert und wohin ich mich entwickeln möchte.</p>
 
-            <section id="school-section">
+            <!--Mein Bild -->
+            <figure>
+                <picture>
+                    <source srcset="/img/personal-photo.webp" type="image/webp">
+                    <img src="/img/personal-photo.jpg" alt="Persönlicher Bild">
+                </picture>
+                <figcaption>Ich (Yehor Vynnyk)</figcaption>
+            </figure>
 
-            </section>
-        </div>
+        </section>
+        <hr/>
 
+        <!-- Interessen -->
+        <section id="interests-section">
+
+            <h2>Interessen</h2>
+            <p>Ich beschäftige mich besonders mit:</p>
+
+            <ol>
+                <li>
+                    <strong>Programmierung</strong>
+                    <p>Code schreiben, Probleme lösen, Neues bauen — für mich ist das kein Job, sondern ein Hobby.</p>
+                </li>
+                <li>
+                    <strong>Taekwondo</strong>
+                    <p>Disziplin, Ausdauer und Respekt — Werte, die ich im Sport und im Leben lebe.</p>
+                </li>
+                <li>
+                    <strong>Tinkering</strong>
+                    <p>Hardware, Netzwerke, alles auseinandernehmen und wieder zusammenbauen.</p>
+                </li>
+            </ol>
+
+        </section>
+        <hr/>
+
+        <!-- Skills -->
+        <section id="skills-section">
+
+            <h2>Skills</h2>
+
+            <p>HTML/CSS/JS</p>
+            <progress value="55" max="100">55%</progress>
+
+            <p>Ruby</p>
+            <progress value="40" max="100">40%</progress>
+
+        </section>
+        <hr/>
+
+        <!-- Schulen -->
+        <section id="school-section">
+
+            <h2>Ausbildung</h2>
+
+            <details open>
+                <summary>IT-Ausbildung (aktuell)</summary>
+                <p>Berufslehre Informatik. Fokus auf Applikationsentwicklung, Netzwerke und Systemadministration.</p>
+            </details>
+
+            <details>
+                <summary>Schulische Grundausbildung</summary>
+                <p>Abschluss der obligatorischen Schulzeit. Vertiefte Interessen in Mathematik, Naturwissenschaften und Informatik.</p>
+            </details>
+
+            <details>
+                <summary>Selbststudium &amp; Kurse</summary>
+                <p>Eigenständiges Lernen durch Online-Plattformen (freeCodeCamp, CS50, YouTube). Projekte in HTML/CSS, JavaScript und Python umgesetzt.</p>
+            </details>
+
+        </section>
+        <hr/>
+
+        <!--Video -->
+        <section id="video-section">
+
+            <h2>Was Sie in der Freizeit schauen können</h2>
+
+            <figure>
+                <div>
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Lieblingsvideo"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <figcaption>Mein Lieblingsvideo</figcaption>
+            </figure>
+
+        </section>
        
     </main>
 
