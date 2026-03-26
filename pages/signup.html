@@ -6,7 +6,6 @@
     <meta name="description" content="Persönliches Portfolio">
     <title>Einzeltraining</title>
 
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/styles.css">
@@ -19,6 +18,8 @@
     <div page-to-include="/templates/header.html"></div>
 
     <main>      
+
+        <aside id="banner-left"></aside>
             
         <div id="content-container">
 
@@ -41,21 +42,24 @@
                 <p>Mit zwei Jahren Unterrichtserfahrung und meiner Arbeit als Assistenztrainer habe ich vielen Schülern geholfen, ihre Ziele zu erreichen. 
                     Ich arbeite geduldig mit jedem Schüler, um sicherzustellen, dass er sein volles Potenzial ausschöpft.</p>
                 
+                <h2>Wo die Training stattfindet</h2>
+                <iframe allowfullscreen="" referrerpolicy="no-referrer-policy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.123456!2d7.5881!3d47.5597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47955ce5e5e5e5e5%3A0x1234567890!2sZu%20den%20Drei%20Linden%2C%20Basel!5e0!3m2!1sen!2s!4v1234567890"></iframe>
+
                 <h2>Kontakt & Mehr Informationen</h2>
                 <p>Haben Sie Fragen? <a href="#footer">Kontaktieren Sie mich direkt</a>!</p>
                 
+                <br><br>
                 <p>Wenn Sie doch Wünsch haben, füllen Sie bitte alle erforderlichen Felder aus.</p>
 
             </section>
             
-            <section id="signup-form" class="card border-0 shadow-sm">
-
-                <div class="card-body p-5">
-                    <form method="POST" action="https://gibm.becknet.ch/formular/formular.php" novalidate>
+            <section id="signup-form" class="border-0 shadow-sm">
+                <div class="p-5">
+                    <form method="POST" action="https://gibm.becknet.ch/formular/formular.php">
                         
                         <!-- Personal Information -->
-                        <div class="form-fieldset">
-                            <div class="fieldset-legend">Persönliche Informationen</div>
+                        <fieldset class="form-fieldset border border-2 p-4 mb-4">
+                            <legend class="fieldset-legend w-auto px-2 mb-3">Persönliche Informationen</legend>
                             
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -92,11 +96,11 @@
                                     <input type="date" class="form-control" id="geburtsdatum" name="geburtsdatum" required>
                                 </div>
                             </div>
-                        </div>
-    
+                        </fieldset>
+     
                         <!-- Contact Information -->
-                        <div class="form-fieldset">
-                            <div class="fieldset-legend">Kontaktinformation</div>
+                        <fieldset class="form-fieldset border border-2 p-4 mb-4">
+                            <legend class="fieldset-legend w-auto px-2 mb-3">Kontaktinformation</legend>
                             
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -109,11 +113,11 @@
                                     <input type="tel" class="form-control" id="telefon" name="telefon" required pattern="[0-9\s\-\+\(\)]+">
                                 </div>
                             </div>
-                        </div>
-    
+                        </fieldset>
+     
                         <!-- Taekwondo Information -->
-                        <div class="form-fieldset">
-                            <div class="fieldset-legend">Taekwondo Informationen</div>
+                        <fieldset class="form-fieldset border border-2 p-4 mb-4">
+                            <legend class="fieldset-legend w-auto px-2 mb-3">Taekwondo Informationen</legend>
                             
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -144,8 +148,8 @@
                             </div>
                             
                             <!-- Training Type -->
-                            <div class="mt-4">
-                                <h5 class="mb-3">Gewünschte Trainingsart</h5>
+                            <fieldset class="form-fieldset border border-1 p-3 mt-4 mb-4">
+                                <legend class="fieldset-legend w-auto px-2 mb-2">Gewünschte Trainingsart</legend>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" id="training-grundlagen" name="trainingsart" value="Grundlagen" required>
                                     <label class="form-check-label" for="training-grundlagen">
@@ -170,11 +174,11 @@
                                         Allgemeintraining
                                     </label>
                                 </div>
-                            </div>
+                            </fieldset>
                             
                             <!-- Training Focus -->
-                            <div class="mt-4">
-                                <h5 class="mb-3">Trainings-Schwerpunkte</h5>
+                            <fieldset class="form-fieldset border border-1 p-3">
+                                <legend class="fieldset-legend w-auto px-2 mb-2">Trainings-Schwerpunkte</legend>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="schwerpunkt-kicks" name="schwerpunkte" value="Hochflugtritte">
                                     <label class="form-check-label" for="schwerpunkt-kicks">
@@ -199,12 +203,12 @@
                                         Selbstverteidigung
                                     </label>
                                 </div>
-                            </div>
-                        </div>
-    
+                            </fieldset>
+                        </fieldset>
+     
                         <!-- Additional Information -->
-                        <div class="form-fieldset">
-                            <div class="fieldset-legend">Zusätzliche Informationen</div>
+                        <fieldset class="form-fieldset border border-2 p-4 mb-4">
+                            <legend class="fieldset-legend w-auto px-2 mb-3">Zusätzliche Informationen</legend>
                             
                             <div class="mb-3">
                                 <label for="ziele" class="form-label">Trainingsziele:</label>
@@ -226,8 +230,8 @@
                                 <label for="verfuegbarkeit" class="form-label"><span class="required">Bevorzugte Trainingstag(e)</span></label>
                                 <input type="text" class="form-control" id="verfuegbarkeit" name="verfuegbarkeit" required placeholder="z.B. Mo, Mi, Fr oder flexible Zeiten">
                             </div>
-                        </div>
-    
+                        </fieldset>
+     
                         <!-- Form Actions -->
                         <div class="d-flex gap-2 mt-4">
                             <button type="submit" class="btn btn-primary btn-lg">Registrierung Absenden</button>
@@ -235,15 +239,12 @@
                         </div>
                     </form>
                 </div>
-                
             </section>
             
         </div>
-        
-        
 
+        <aside id="banner-right"></aside>
         
-
     </main>
 
     <div page-to-include="/templates/footer.html"></div>
