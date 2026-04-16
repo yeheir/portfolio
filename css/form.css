@@ -3,31 +3,33 @@
     background-color: var(--dark-charcoal);
     color: var(--light-grey);
     border-color: var(--grey);
-}
 
-.form-control:focus,
-.form-select:focus {
-    background-color: var(--charcoal);
-    color: var(--light-grey);
-    border-color: var(--gold);
-    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
-}
+    &:focus {
+        background-color: var(--charcoal);
+        color: var(--light-grey);
+        border-color: var(--gold);
+        box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+    }
 
-.form-control::placeholder {
-    color: var(--grey);
+    &::placeholder {
+        color: var(--grey);
+    }
 }
 
 .form-label {
     color: var(--light-grey);
     font-weight: 500;
+
+    .required::after {
+        content: " *";
+        color: var(--gold);
+    }
 }
 
-.form-label .required::after {
-    content: " *";
-    color: var(--gold);
-}
 
-/* Card styling */
+
+/* ===== Main Form Field ======== */
+
 .card {
     background-color: var(--charcoal);
     color: var(--light-grey);
@@ -39,7 +41,9 @@
 }
 
 
-/* Fieldset styling as Bootstrap accordion-like */
+
+/* ======= Fieldsets ======= */
+
 .form-fieldset {
     border: 1px solid var(--grey);
     border-radius: 0.375rem;
@@ -47,34 +51,34 @@
     margin-bottom: 1.5rem;
     background-color: var(--dark-charcoal);
     transition: all 0.3s ease;
+
+    &:hover {
+        border-color: var(--gold);
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.1);
+    }
+
+    .fieldset-legend {
+        color: var(--gold);
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+    }
 }
 
-.form-fieldset:hover {
-    border-color: var(--gold);
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.1);
-}
+/* ===== Inner Fieldsets ====== */
 
-.fieldset-legend {
-    color: var(--gold);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-}
-
-/* Nested fieldsets */
 .form-fieldset .form-fieldset {
     margin-top: 1.5rem;
     background-color: rgba(0, 0, 0, 0.3);
     border-color: var(--grey);
+
+    .fieldset-legend {
+        font-size: 0.9rem;
+    }
 }
 
-.form-fieldset .form-fieldset .fieldset-legend {
-    font-size: 0.9rem;
-}
-
-/* Radio & Checkbox custom styling */
+/* ====== Radio & Checkbox ==== */
 .form-check {
     margin-bottom: 1rem;
 }
@@ -83,16 +87,16 @@
     border-color: var(--grey);
     background-color: var(--dark-charcoal);
     accent-color: var(--gold);
-}
 
-.form-check-input:checked {
-    background-color: var(--gold);
-    border-color: var(--gold);
-}
+    &:checked {
+        background-color: var(--gold);
+        border-color: var(--gold);
+    }
 
-.form-check-input:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+    &:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+    }
 }
 
 .form-check-label {
@@ -102,36 +106,38 @@
     cursor: pointer;
 }
 
-/* Button styling */
-.btn-primary {
-    background-color: var(--gold);
-    border-color: var(--gold);
-    color: var(--dark-charcoal);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+/* ======= Buttons ===== */
 
-.btn-primary:hover {
-    background-color: var(--light-grey);
-    border-color: var(--light-grey);
-    color: var(--dark-charcoal);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
-}
+.d-flex {
+    justify-content: center;
 
-.btn-secondary {
-    background-color: var(--grey);
-    border-color: var(--grey);
-    color: var(--light-grey);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    .btn-primary {
+        background-color: var(--gold);
+        border-color: var(--gold);
+        color: var(--dark-charcoal);
+        letter-spacing: 1px;
+        font-weight: 600;
 
-.btn-secondary:hover {
-    background-color: var(--light-grey);
-    border-color: var(--light-grey);
-    color: var(--dark-charcoal);
-    transform: translateY(-2px);
+        &:hover {
+            background-color: var(--light-grey);
+            border-color: var(--light-grey);
+            color: var(--dark-charcoal);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        }
+    }
+
+    .btn-secondary {
+        background-color: var(--grey);
+        border-color: var(--grey);
+        color: var(--light-grey);
+        letter-spacing: 1px;
+
+        &:hover {
+            background-color: var(--light-grey);
+            border-color: var(--light-grey);
+            color: var(--dark-charcoal);
+            transform: translateY(-2px);
+        }
+    }
 }
