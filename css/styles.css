@@ -133,8 +133,10 @@ p {
 
 /* ====== Homepage ========*/
 
-#intro-section {
+#intro-section div {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
     div {
         display: flex;
@@ -148,7 +150,7 @@ p {
         max-width: 200px;
         width: 100%;
         height: auto;
-        margin-left: 20px;
+        margin-top: 10px;
 
         picture {
             width: inherit;
@@ -167,8 +169,6 @@ p {
             margin: 5px;
         }
     }
-
-    
 }
 
 /* ===== Tkd Page ===== */
@@ -335,7 +335,7 @@ p {
 
 /* ===== Responsive ================================ */
 
-/* ===== TABLETS LANDSCAPE (max-width: 1200px) ===== */
+/* ========= TABLETS ========== */
 
 @media screen and (max-width: 1200px) {
     body {
@@ -373,13 +373,12 @@ p {
         width: 85%;
     }
 
-    #footer {
-        padding: 40px 20px 40px 20px;
+    #footer {        
+        padding-top: 40px;
+        padding-bottom: 40px;
         width: 100%;
     }
 }
-
-/* ===== TABLETS PORTRAIT (max-width: 900px) ===== */
 
 @media screen and (max-width: 900px) {
     body {
@@ -392,6 +391,7 @@ p {
     }
 
     #content-container {
+        width: auto;
         padding: 15px;
     }
 
@@ -415,7 +415,7 @@ p {
         padding: 1rem 0 0.5rem 0;
     }
 
-    #intro-section {
+    #intro-section div {
         flex-direction: column;
         align-items: center;
 
@@ -453,23 +453,40 @@ p {
         max-width: 500px;
     }
 
-    #header nav {
-        gap: 1rem;
-        flex-wrap: wrap;
+    #header {
+        
+        padding-left: 0;
+        padding-right: 0;
 
-        a {
-            font-size: 13px;
+
+        nav {
+            gap: 1rem;
+            flex-wrap: wrap;
+
+
+            a {
+                font-size: 13px;
+            }
         }
+
     }
+    
+    
 
-    #footer .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
+    #footer {
 
-        div {
-            min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+
+            div {
+                min-width: 100%;
+            }
         }
     }
 
@@ -517,7 +534,7 @@ p {
     }
 }
 
-/* ===== MOBILE (max-width: 600px) ===== */
+/* ===== MOBILE  ===== */
 
 @media screen and (max-width: 600px) {
     body {
@@ -559,7 +576,7 @@ p {
         font-size: 0.95rem;
     }
 
-    #intro-section {
+    #intro-section div {
         flex-direction: column;
         align-items: center;
 
@@ -595,7 +612,9 @@ p {
     }
 
     #header {
-        padding: 15px 10px;
+        
+        padding-top: 15px;
+        padding-bottom: 16px;
 
         nav {
             flex-direction: column;
@@ -604,7 +623,8 @@ p {
 
             a {
                 font-size: 12px;
-                padding: 8px 10px;
+                padding-top: 6px;
+                padding-bottom: 6px;
                 width: 100%;
                 text-align: center;
             }
@@ -612,7 +632,9 @@ p {
     }
 
     #footer {
-        padding: 25px 10px;
+        
+        padding-top: 25px;
+        padding-bottom: 25px;
 
         .footer-container {
             flex-direction: column;
@@ -697,7 +719,6 @@ p {
         height: 15px;
     }
 
-    /* Form buttons stack on mobile */
     .d-flex {
         flex-direction: column;
         gap: 10px;
@@ -714,7 +735,6 @@ p {
     }
 }
 
-/* ===== EXTRA SMALL MOBILE (max-width: 400px) ===== */
 
 @media screen and (max-width: 400px) {
     h1 {
@@ -739,7 +759,8 @@ p {
 
     #header nav a {
         font-size: 11px;
-        padding: 6px 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
 
     .form-fieldset {

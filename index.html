@@ -10,39 +10,35 @@
 </head>
 
 <body>
-    
     <div page-to-include="/templates/header.html"></div>
 
     <main>
-        
         <aside id="banner-left"></aside>   
 
         <div id="content-container">
-
             <h1>Mein Portfolio</h1>
 
             <section id="intro-section">
-
-                <div>
-                    <p>Hallo, ich bin <strong>Yehor</strong></p>
-                    <p>Ich bin ein <em>IT-Lernender</em></p>
-                    <p>Dieses Portfolio zeigt, wer ich bin, was mich interessiert und wohin ich mich entwickeln möchte.</p>
+                <div>        
+                    <figure>
+                        <picture>
+                            <source srcset="./img/personal-photo.webp" type="image/webp">
+                            <img src="./img/personal-photo.jpg" alt="Persönlicher Bild">
+                        </picture>
+                        <figcaption>Ich</figcaption>
+                    </figure>
+                    <div>
+                        <h2>Persönliche Informationen</h2> <br>
+                        <p>Hallo, ich bin <strong>Yehor</strong></p>
+                        <p>Ich bin ein <em>IT-Lernender</em></p>
+                        <p>Dieses Portfolio zeigt, wer ich bin, was mich interessiert und wohin ich mich entwickeln möchte.</p>
+                    </div>
                 </div>
-    
-                <figure>
-                    <picture>
-                        <source srcset="./img/personal-photo.webp" type="image/webp">
-                        <img src="./img/personal-photo.jpg" alt="Persönlicher Bild">
-                    </picture>
-                    <figcaption>Ich</figcaption>
-                </figure>
-    
             </section>
-            <hr/>
+            <hr>
     
             <!-- Interessen -->
             <section id="interests-section">
-    
                 <h2>Interessen</h2>
                 <p>Ich beschäftige mich besonders mit:</p>
                 
@@ -57,13 +53,11 @@
                         <strong>Zeichnen</strong>
                     </li>
                 </ol>
-    
             </section>
-            <hr/>
+            <hr>
     
             <!-- Skills -->
             <section id="skills-section">
-    
                 <h2>Skills</h2>
     
                 <p>HTML/CSS/JS</p>
@@ -71,13 +65,11 @@
     
                 <p>Ruby</p>
                 <progress value="40" max="100">40%</progress>
-    
             </section>
-            <hr/>
+            <hr>
     
             <!-- Schulen -->
             <section id="school-section">
-    
                 <h2>Ausbildung</h2>
     
                 <details open>
@@ -94,13 +86,11 @@
                     <summary>Lyceum #1 Merefa</summary>
                     <p>11 Jahren bis 2023</p>
                 </details>
-    
             </section>
-            <hr/>
+            <hr>
     
             <!--Video -->
             <section class="video-section">
-    
                 <h2>Mein Lieblingslied</h2>
                 
                 <div>
@@ -120,19 +110,14 @@
                         Audio wird vom Brouser nicht unterstützt.
                     </audio>                    
                 </div>
-    
             </section>
-
         </div>
              
-        <aside id="banner-right"></aside>
-       
+        <aside id="banner-right"></aside>    
     </main>
 
     <div page-to-include="/templates/footer.html"></div>
 
-
-    <script src="/js/menu.js"></script>
     <script src="/js/include.js"></script>
 
 </body>
