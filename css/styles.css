@@ -23,8 +23,9 @@ body {
     flex-direction: column;    
     align-items: center;
 
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    width: 1000px;
 }
 
 main {
@@ -144,7 +145,8 @@ p {
     }
 
     figure {
-        width: 20%;
+        max-width: 200px;
+        width: 100%;
         height: auto;
         margin-left: 20px;
 
@@ -174,8 +176,8 @@ p {
 #training-description {
     iframe {
         width: 100%;
-        height: 400px;
-        border: 0;
+        max-width: 600px;
+        height: auto;
     }
 }
 
@@ -220,7 +222,8 @@ p {
     nav {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem; 
+        flex-wrap: wrap;
  
         a {
             margin-top: 0;
@@ -327,5 +330,423 @@ p {
 
         font-size: 0.9em;
         border-top: 1px solid var(--grey);
+    }
+}
+
+/* ===== Responsive ================================ */
+
+/* ===== TABLETS LANDSCAPE (max-width: 1200px) ===== */
+
+@media screen and (max-width: 1200px) {
+    body {
+        width: 95%;
+        max-width: 1000px;
+    }
+
+    #banner-left,
+    #banner-right {
+        display: none;
+    }
+
+    h2 {
+        padding: 1.5rem 0 0.5rem 1rem;
+    }
+
+    h4 {
+        padding: 1.5rem 0 0.5rem 1rem;
+    }
+
+    h5 {
+        padding: 1.5rem 0 0.5rem 1rem;
+    }
+
+    #banner-left,
+    #banner-right {
+        width: 5%;
+    }
+
+    #intro-section figure {
+        width: 25%;
+    }
+
+    .video-section iframe {
+        width: 85%;
+    }
+
+    #footer {
+        padding: 40px 20px 40px 20px;
+        width: 100%;
+    }
+}
+
+/* ===== TABLETS PORTRAIT (max-width: 900px) ===== */
+
+@media screen and (max-width: 900px) {
+    body {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #content-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        padding: 1.5rem 0 0.5rem 0;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        padding: 1.25rem 0 0.5rem 0;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+        padding: 1rem 0 0.5rem 0;
+    }
+
+    #intro-section {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            order: 2;
+        }
+
+        figure {
+            width: 40%;
+            margin-left: 0;
+            margin-bottom: 20px;
+            order: 1;
+        }
+    }
+
+    .video-section {
+        div {
+            justify-content: center;
+        }
+
+        iframe {
+            width: 90%;
+            height: 250px;
+        }
+    }
+
+    .audio-wrapper {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    audio {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #header nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        a {
+            font-size: 13px;
+        }
+    }
+
+    #footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+
+        div {
+            min-width: 100%;
+        }
+    }
+
+    #footer .footer-left,
+    #footer .footer-right {
+        align-items: center;
+    }
+
+    #footer .footer-right a {
+        margin-bottom: 5px;
+    }
+
+    .list-simple {
+        padding-left: 0;
+
+        li {
+            padding: 6px 10px;
+            text-align: center;
+        }
+    }
+
+    .form-fieldset {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .form-check {
+        margin-bottom: 0.75rem;
+    }
+
+    progress {
+        width: 100%;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    #taekwondo-info, #reg-link-section {
+        padding: 10px;
+    }
+}
+
+/* ===== MOBILE (max-width: 600px) ===== */
+
+@media screen and (max-width: 600px) {
+    body {
+        max-width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #content-container {
+        width: auto;        
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        padding-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        padding: 1.25rem 0 0.5rem 0;
+    }
+
+    h4 {
+        font-size: 1rem;
+        padding: 1rem 0 0.5rem 0;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+        padding: 0.75rem 0 0.5rem 0;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    #intro-section {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            width: 100%;
+        }
+
+        figure {
+            width: 50%;
+            margin-left: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    .video-section {
+        div {
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 220px;
+        }
+    }
+
+    .audio-wrapper {
+        margin: 15px 0;
+        padding: 0 5px;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+    #header {
+        padding: 15px 10px;
+
+        nav {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+
+            a {
+                font-size: 12px;
+                padding: 8px 10px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    #footer {
+        padding: 25px 10px;
+
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            align-items: center;
+
+            h4 {
+                padding: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        .social-icons {
+            gap: 10px;
+
+            a img {
+                width: 20px;
+            }
+        }
+
+        .footer-bottom {
+            margin-top: 15px;
+            padding-top: 8px;
+            font-size: 0.8em;
+        }
+    }
+
+    .list-simple {
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 5px 8px;
+            font-size: 0.95rem;
+        }
+    }
+
+    .form-fieldset {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+        border-radius: 0.25rem;
+
+        .fieldset-legend {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .form-fieldset .form-fieldset {
+        margin-top: 1rem;
+        padding: 0.75rem;
+
+        .fieldset-legend {
+            font-size: 0.8rem;
+        }
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .form-check {
+        margin-bottom: 0.5rem;
+    }
+
+    .form-check-label {
+        font-size: 0.95rem;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    progress {
+        width: 100%;
+        height: 15px;
+    }
+
+    /* Form buttons stack on mobile */
+    .d-flex {
+        flex-direction: column;
+        gap: 10px;
+
+        .btn-primary,
+        .btn-secondary {
+            width: 100%;
+        }
+    }
+
+    hr {
+        margin: 1rem 0;
+        opacity: 0.5;
+    }
+}
+
+/* ===== EXTRA SMALL MOBILE (max-width: 400px) ===== */
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #intro-section figure {
+        width: 60%;
+    }
+
+    .video-section iframe {
+        height: 180px;
+    }
+
+    #header nav a {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    .form-fieldset {
+        padding: 0.75rem;
+    }
+
+    .form-check-label {
+        font-size: 0.9rem;
     }
 }
