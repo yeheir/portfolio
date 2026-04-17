@@ -153,12 +153,12 @@ p {
         margin-top: 10px;
 
         picture {
-            width: inherit;
+            width: 200px;
             height: inherit;
 
             img {
+                width: 200px;
                 height: auto;
-                width: 100%;
                 object-fit: contain;
                 border: 2px solid var(--gold);
             }
@@ -293,6 +293,7 @@ p {
 
             a img {             
                 width: 24px;
+                height: 24px;
 
                 transition: transform 0.2s ease;
 
