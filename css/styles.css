@@ -153,12 +153,12 @@ p {
         margin-top: 10px;
 
         picture {
-            width: 200px;
+            width: inherit;
             height: inherit;
 
             img {
-                width: 200px;
                 height: auto;
+                width: 100%;
                 object-fit: contain;
                 border: 2px solid var(--gold);
             }
@@ -200,7 +200,7 @@ p {
     width: 7%;
     margin-right: -20px;
 
-    background-image: url('/img/banner-right.png');
+    background-image: url('/portfolio/img/banner-right.png');
     background-repeat: repeat-y;
     background-size: 100% auto;
 }
